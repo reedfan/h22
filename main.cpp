@@ -5,6 +5,7 @@ void func1();
 void func2();
 void func3();
 void func4();
+void func5();
 
 
 int main() {
@@ -12,39 +13,10 @@ int main() {
 //    func2();
   //  func3();
   func4();
+  func5();
 }
 
 void func1(){
-    int  var1;
-    char var2[10];
-
-    cout << "var1 变量的地址： ";
-    cout << &var1 << endl;
-
-    cout << "var2 变量的地址： ";
-    cout << &var2 << endl;
-
-}
-
-void func2(){
-    int  var = 20;   // 实际变量的声明
-    int  *ip;        // 指针变量的声明
-
-    ip = &var;       // 在指针变量中存储 var 的地址
-
-    cout << "Value of var variable: ";
-    cout << var << endl;
-
-    // 输出在指针变量中存储的地址
-    cout << "Address stored in ip variable: ";
-    cout << ip << endl;
-
-    // 访问指针中地址的值
-    cout << "Value of *ip variable: ";
-    cout << *ip << endl;
-}
-
-void func3(){
     int n[ 10 ]; // n 是一个包含 10 个整数的数组
 
     // 初始化数组元素
@@ -62,7 +34,55 @@ void func3(){
 
 }
 
+
+void func2(){
+    // 一个带有 5 行 2 列的数组
+    int a[5][2] = { {0,0}, {1,2}, {2,4}, {3,6},{4,8}};
+
+    // 输出数组中每个元素的值
+    for ( int i = 0; i < 5; i++ )
+        for ( int j = 0; j < 2; j++ )
+        {
+            cout << "a[" << i << "][" << j << "]: ";
+            cout << a[i][j]<< endl;
+        }
+}
+
+
+
+void func3(){
+    int  var1;
+    char var2[10];
+
+    cout << "var1 变量的地址： ";
+    cout << &var1 << endl;
+
+    cout << "var2 变量的地址： ";
+    cout << &var2 << endl;
+
+}
+
 void func4(){
+    int  var = 20;   // 实际变量的声明
+    int  *ip;        // 指针变量的声明
+
+    ip = &var;       // 在指针变量中存储 var 的地址
+
+    cout << "Value of var variable: ";
+    cout << var << endl;
+
+    // 输出在指针变量中存储的地址
+    cout << "Address stored in ip variable: ";
+    cout << ip << endl;
+
+    // 访问指针中地址的值
+    cout << "Value of *ip variable: ";
+    cout << *ip << endl;
+}
+
+
+
+void func5(){
     // 带有 5 个元素的双精度浮点型数组
     double balance[5] = {1000.0, 2.0, 3.4, 17.0, 50.0};
     double *p;
